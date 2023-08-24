@@ -73,7 +73,7 @@ const footerItems: footerItem[] = [
 const FooterItem = (props: footerItem) => {
     const { title, link } = props;
     return (
-        <a href={link} className="text-[0.7rem] font-light">
+        <a href={link} className="flex-shrink-0 text-[0.65rem] font-light">
             {title}
         </a>
     );
@@ -81,18 +81,18 @@ const FooterItem = (props: footerItem) => {
 
 const Footer = () => {
     return (
-        <div className="p-5 flex flex-col flex-shrink-0 gap-3 text-neutral-400">
-            <div className="flex flex-row gap-4">
+        <div className="px-2 py-5 flex flex-col flex-shrink-0 gap-3 text-neutral-400">
+            <div className="flex flex-row gap-3">
                 {footerItems.slice(0, 4).map((footerItem) => (
                     <FooterItem {...footerItem} />
                 ))}
             </div>
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-row gap-3">
                 {footerItems.slice(4, 6).map((footerItem) => (
                     <FooterItem {...footerItem} />
                 ))}
             </div>
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-row">
                 {footerItems.slice(6).map((footerItem) => (
                     <FooterItem {...footerItem} />
                 ))}
@@ -103,10 +103,10 @@ const Footer = () => {
 
 const Library = () => {
     return (
-        <div className=" p-2 flex flex-col justify-start gap-2 bg-neutral-900 rounded-md">
+        <div className=" p-2 flex flex-col justify-start gap-2 flex-grow bg-neutral-900 rounded-md">
             <div className="p-3 flex flex-row items-center text-neutral-400">
                 <div className="flex flex-row flex-grow items-center gap-3 hover:cursor-pointer hover:text-white ease-in-out duration-500">
-                    <BiLibrary size={32} />
+                    <BiLibrary size={28} />
                     <h1 className="font-semibold">Your Library</h1>
                 </div>
                 <BiPlus
@@ -114,13 +114,13 @@ const Library = () => {
                     size={32}
                 />
             </div>
-            <div className="h-[38vh] flex flex-col gap-5 overflow-scroll">
+            <div className="h-[35vh] flex flex-col gap-5 overflow-scroll">
                 {ctaCards.map((ctaCard) => (
                     <CtaCard {...ctaCard} />
                 ))}
             </div>
             <Footer />
-            <div className="px-5 py-4">
+            <div className="px-2 py-4">
                 <div className="w-max px-3 py-1 flex flex-row gap-1 items-center rounded-full border border-neutral-400">
                     <BiGlobe size={20} />
                     <h1 className="text-xs font-semibold">English</h1>

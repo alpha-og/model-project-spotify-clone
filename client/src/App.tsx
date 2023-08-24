@@ -4,8 +4,8 @@ import { Home, Library, Nav, SignUpBanner } from "./components/Components";
 function App() {
     return (
         <div className="h-screen p-2 flex flex-col gap-2 bg-neutral-950 text-white overflow-y-scroll">
-            <div className="flex flex-row gap-2">
-                <div className=" w-[20.7rem] flex flex-col flex-shrink gap-2">
+            <div className="flex flex-row gap-2 flex-grow">
+                <div className=" w-[17.5rem] flex flex-col flex-shrink gap-2">
                     <Nav />
                     <Library />
                 </div>

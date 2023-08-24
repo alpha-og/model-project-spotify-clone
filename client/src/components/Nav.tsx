@@ -18,13 +18,13 @@ interface navItem {
 const navItems: navItem[] = [
     {
         title: "Home",
-        icon: <GoHome size={32} />,
-        iconActive: <GoHomeFill size={32} />,
+        icon: <GoHome size={28} />,
+        iconActive: <GoHomeFill size={28} />,
     },
     {
         title: "Search",
-        icon: <BiSearch size={32} />,
-        iconActive: <BiSolidSearch size={32} />,
+        icon: <BiSearch size={28} />,
+        iconActive: <BiSolidSearch size={28} />,
     },
 ];
 
