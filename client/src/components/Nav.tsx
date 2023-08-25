@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { BiSearch, BiSolidSearch } from "react-icons/bi";
 import { GoHome, GoHomeFill } from "react-icons/go";
 // redux store imports
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { selectPage, setPage } from "../store/userSlice";
 
 interface navItem {
@@ -29,8 +29,8 @@ const navItems: navItem[] = [
 ];
 
 const NavItem = (props: navItem) => {
-    const page = useAppSelector(selectPage);
-    const dispatch = useAppDispatch();
+    const page = useSelector(selectPage);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const { title, icon, iconActive } = props;
     const [active, setActive] = useState<boolean>();
@@ -55,8 +55,8 @@ const NavItem = (props: navItem) => {
 const Nav = () => {
     return (
         <div className="px-5 py-3 grid grid-flow-row gap-5 bg-neutral-900 rounded-md">
-            {navItems.map((navItem) => (
-                <NavItem {...{ ...navItem }} />
+            {navItems.map((navItem, index) => (
+                <NavItem key={index} {...{ ...navItem }} />
             ))}
         </div>
     );

@@ -1,10 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";
-interface userState {
+
+interface UserState {
     user: string;
     page: string;
 }
-const initialState: userState = {
+const initialState: UserState = {
     user: "",
     page: "Home",
 };

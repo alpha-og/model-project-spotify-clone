@@ -83,18 +83,18 @@ const Footer = () => {
     return (
         <div className="px-2 py-5 flex flex-col flex-shrink-0 gap-3 text-neutral-400">
             <div className="flex flex-row gap-3">
-                {footerItems.slice(0, 4).map((footerItem) => (
-                    <FooterItem {...footerItem} />
+                {footerItems.slice(0, 4).map((footerItem, index) => (
+                    <FooterItem key={index} {...footerItem} />
                 ))}
             </div>
             <div className="flex flex-row gap-3">
-                {footerItems.slice(4, 6).map((footerItem) => (
-                    <FooterItem {...footerItem} />
+                {footerItems.slice(4, 6).map((footerItem, index) => (
+                    <FooterItem key={index} {...footerItem} />
                 ))}
             </div>
             <div className="flex flex-row">
-                {footerItems.slice(6).map((footerItem) => (
-                    <FooterItem {...footerItem} />
+                {footerItems.slice(6).map((footerItem, index) => (
+                    <FooterItem key={index} {...footerItem} />
                 ))}
             </div>
         </div>
@@ -115,8 +115,8 @@ const Library = () => {
                 />
             </div>
             <div className="h-[35vh] flex flex-col gap-5 overflow-scroll">
-                {ctaCards.map((ctaCard) => (
-                    <CtaCard {...ctaCard} />
+                {ctaCards.map((ctaCard, index) => (
+                    <CtaCard key={index} {...ctaCard} />
                 ))}
             </div>
             <Footer />
